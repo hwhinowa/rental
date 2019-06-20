@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1'>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>쇼핑몰</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Noto+Sans+KR' rel='stylesheet'>
+    <link rel='stylesheet' href='./css/main.css'>
+    <link rel='stylesheet' href='./css/responsive.css'>
+
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css'>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js'></script>
+</head>
+
+<body>
+    <div id='wrap'>
+        <!-- if IE -->
+        <div class="get_out">
+            <p>Chrome, Firefox나 Opera 브라우저로 접속하세요</p>
+            <p class='mobile'>사이트를 표시할 수 없습니다<br>PC로 접속해주세요</p>
+        </div>
+        <!-- HEADER -->
+        <div class='header_box'>
+            <div class='header clear_fix'>
+                <div class='logo_box'><img src='./img/logo.png' alt=' '></div>
+                <ul class='gnb'>
+                    <li><a href='./html/mypage.html#interest'>관심상품</a></li>
+                    <li><a href='./html/advertisement.html'>광고 문의</a></li>
+                    <li><a href='./html/design.html'>디자인 의뢰</a></li>
+                    <li><a href='./html/board.html'>게시판</a></li>
+                    <li><a href='./html/faq.html'>FAQ</a></li>
+                </ul>
+                <div class='util_box clear_fix'>
+                    <div onmouseover='my_menu_open()' onmouseout='my_menu_close()'>
+                        <ul class='my_menu'>
+                            <li>
+                                <a href='./html/mypage.html#product'>
+                                    <span class='my_icon_box'><img src='./img/my_ic1.png' alt=' '></span>
+                                    <p>상품관리</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='./html/mypage.html#interest'>
+                                    <span class='my_icon_box'><img src='./img/my_ic2.png' alt=' '></span>
+                                    <p>관심상품</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='./html/mypage.html#history'>
+                                    <span class='my_icon_box'><img src='./img/my_ic3.png' alt=' '></span>
+                                    <p>렌탈내역</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='./html/mypage.html#nickname'>
+                                    <span class='my_icon_box'><img src='./img/my_ic4.png' alt=' '></span>
+                                    <p>닉네임<span></span>관리</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='./html/mypage.html#keyword'>
+                                    <span class='my_icon_box'><img src='./img/my_ic5.png' alt=' '></span>
+                                    <p>키워드<span></span>관리</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='./html/mypage.html#point' class='line'>
+                                    <span class='my_icon_box'><img src='./img/my_ic6.png' alt=' '></span>
+                                    <p>적립금<span></span>관리</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <button class='my_btn'>MY</button>
+                    </div>
+                    <!-- <button>로그인</button> -->
+                    <button class='search'></button>
+                    <input type='text' name='' id=''>
+                </div>
+            </div>
+        </div>
+        <!-- HEADER END -->
+
+        <!-- CONTENTS -->
+        <div class='contents'>
+            <!-- 메인 이미지 -->
+            <div class='visual'>
+                <div>
+                    <p>
+                        <strong>쇼핑몰</strong> 앱 <strong>하나면</strong><span></span>
+                        <strong>생활</strong>이 <strong>편리</strong>해진다
+                    </p>
+                    <button class='apple'>APP STORE</button>
+                    <button class='google'>GOOGLE STORE</button>
+                </div>
+            </div>
+
+            <!-- 등록/찾기 -->
+            <div class='acting_box'>
+                <ul class='clear_fix'>
+                    <li class='acting_item rent'>
+                        <p>가까운데서<span>빌리고</span></p>
+                        <span></span>
+                        <button class='act_register'>등록</button>
+                        <button class='act_search'>찾기</button>
+                    </li>
+                    <li class='acting_item try'>
+                        <p>사기전에<span>써보고</span></p>
+                        <span></span>
+                        <button class='act_register'>등록</button>
+                        <button class='act_search'>찾기</button>
+                    </li>
+                    <li class='acting_item get'>
+                        <p>필요한것<span>구하고</span></p>
+                        <span></span>
+                        <button class='act_register'>등록</button>
+                        <button class='act_search'>찾기</button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 인기상품 -->
+            <div class='best_box'>
+                <div class='best_item clear_fix'>
+                    <button onclick='location.href = "./html/list.html"'>MORE</button>
+                    <div class='best_title'>
+                        <p>
+                            쇼핑몰<span></span><strong>빌리고<span></span>인기상품</strong>
+                        </p>
+                        <span class='rent_img'></span>
+                    </div>
+                    <div class='slider'>
+                        <div class='bxSlider'>
+                            <div class='card'>
+                                <a href='./html/detail.html'>
+                                    <span>
+                                        <img src='./img/best_refrigerator.png' alt=' '>
+                                    </span>
+                                    <p>냉장고</p>
+                                    <p class='rank_num'>1위</p>
+                                </a>
+                            </div>
+                            <div class='card'>
+                                <a href='./html/detail.html'>
+                                    <span>
+                                        <img src='./img/best_notebook.png' alt=' '>
+                                    </span>
+                                    <p>삼성 노트북 펜s</p>
+                                    <p class='rank_num'>2위</p>
+                                </a>
+                            </div>
+                            <div class='card'>
+                                <a href='./html/detail.html'>
+                                    <span>
+                                        <img src='./img/best_carriage.png' alt=' '>
+                                    </span>
+                                    <p>유모차</p>
+                                    <p class='rank_num'>3위</p>
+                                </a>
+                            </div>
+                            <div class='card'>
+                                <a href='./html/detail.html'>
+                                    <span>
+                                        <img src='./img/best_refrigerator.png' alt=' '>
+                                    </span>
+                                    <p>냉장고</p>
+                                    <p class='rank_num'>4위</p>
+                                </a>
+                            </div>
+                            <div class='card'>
+                                <a href='./html/detail.html'>
+                                    <span>
+                                        <img src='./img/best_notebook.png' alt=' '>
+                                    </span>
+                                    <p>삼성 노트북 펜s</p>
+                                    <p class='rank_num'>5위</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='best_item clear_fix'>
+                    <button onclick='location.href = "./html/list.html"'>MORE</button>
+                    <div class='best_title'>
+                        <p>
+                            쇼핑몰<span></span><strong>써보고<span></span>인기상품</strong>
+                        </p>
+                        <span class='try_img'></span>
+                    </div>
+                    <div class='slider'>
+                        <div class='bxSlider'>
+                            <div class='card' onclick='console.log("a")'>
+                                <a href='./html/detail.html' onclick='console.log("b")'>
+                                    <span>
+                                        <img src='./img/best_fryer.png' alt=' '>
+                                    </span>
+                                    <p>에어 프라이어</p>
+                                    <p class='rank_num'>1위</p>
+                                </a>
+                            </div>
+                            <div class='card'>
+                                <a href='./html/detail.html'>
+                                    <span>
+                                        <img src='./img/best_ipad.png' alt=' '>
+                                    </span>
+                                    <p>아이패드 프로 3세대</p>
+                                    <p class='rank_num'>2위</p>
+                                </a>
+                            </div>
+                            <div class='card'>
+                                <a href='./html/detail.html'>
+                                    <span>
+                                        <img src='./img/best_carrier.png' alt=' '>
+                                    </span>
+                                    <p>20인치 여행 캐리어</p>
+                                    <p class='rank_num'>3위</p>
+                                </a>
+                            </div>
+                            <div class='card'>
+                                <a href='./html/detail.html'>
+                                    <span>
+                                        <img src='./img/best_fryer.png' alt=' '>
+                                    </span>
+                                    <p>에어 프라이어</p>
+                                    <p class='rank_num'>4위</p>
+                                </a>
+                            </div>
+                            <div class='card'>
+                                <a href='./html/detail.html'>
+                                    <span>
+                                        <img src='./img/best_ipad.png' alt=' '>
+                                    </span>
+                                    <p>아이패드 프로 3세대</p>
+                                    <p class='rank_num'>5위</p>
+                                </a>
+                            </div>
+                            <div class='card'>
+                                <a href='./html/detail.html'>
+                                    <span>
+                                        <img src='./img/best_carrier.png' alt=' '>
+                                    </span>
+                                    <p>20인치 여행 캐리어</p>
+                                    <p class='rank_num'>6위</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='best_item clear_fix'>
+                    <button onclick='location.href = "./html/list.html"'>MORE</button>
+                    <div class='best_title'>
+                        <p>
+                            쇼핑몰<span></span><strong>구하고<span></span>인기상품</strong>
+                        </p>
+                        <span class='get_img'></span>
+                    </div>
+                    <div class='slider'>
+                        <div class='bxSlider'>
+                            <div class='card'>
+                                <a href='./html/detail.html'>
+                                    <span>
+                                        <img src='./img/best_water.png' alt=' '>
+                                    </span>
+                                    <p>정수기</p>
+                                    <p class='rank_num'>1위</p>
+                                </a>
+                            </div>
+                            <div class='card'>
+                                <a href='./html/detail.html'>
+                                    <span>
+                                        <img src='./img/best_car.png' alt=' '>
+                                    </span>
+                                    <p>KS 자동차</p>
+                                    <p class='rank_num'>2위</p>
+                                </a>
+                            </div>
+                            <div class='card'>
+                                <a href='./html/detail.html'>
+                                    <span>
+                                        <img src='./img/best_fryer.png' alt=' '>
+                                    </span>
+                                    <p>커플 자전거</p>
+                                    <p class='rank_num'>3위</p>
+                                </a>
+                            </div>
+                            <div class='card'>
+                                <a href='./html/detail.html'>
+                                    <span>
+                                        <img src='./img/best_carrier.png' alt=' '>
+                                    </span>
+                                    <p>유모차</p>
+                                    <p class='rank_num'>4위</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 닉네임 -->
+            <div class='nickname_box'>
+                <div class='nickname_area'>
+                    <div class='nickname_left'>
+                        <p>쇼핑몰닉네임 매매 순위</p>
+                        <ul class='nickname_list'>
+                            <li>
+                                <button class='nickname_item'>
+                                    <span>1</span>
+                                    <p>에어프라이어 렌탈</p>
+                                    <div class='rank_status up'>1</div>
+                                </button>
+                            </li>
+                            <li>
+                                <button class='nickname_item'>
+                                    <span>2</span>
+                                    <p>노트북21</p>
+                                    <div class='rank_status down'>1</div>
+                                </button>
+                            </li>
+                            <li>
+                                <button class='nickname_item'>
+                                    <span>3</span>
+                                    <p>노트북렌탈</p>
+                                    <div class='rank_status up'>2</div>
+                                </button>
+                            </li>
+                            <li>
+                                <button class='nickname_item'>
+                                    <span>4</span>
+                                    <p>냉장고매매</p>
+                                    <div class='rank_status stay'></div>
+                                </button>
+                            </li>
+                            <li>
+                                <button class='nickname_item'>
+                                    <span>5</span>
+                                    <p>부동산집</p>
+                                    <div class='rank_status new'>NEW</div>
+                                </button>
+                            </li>
+                            <li>
+                                <button class='nickname_item'>
+                                    <span>6</span>
+                                    <p>천막렌탈</p>
+                                    <div class='rank_status stay'></div>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class='nickname_right'>
+                        <div class="type_area">
+                            <button class='active'>빌리고 순위</button>
+                            <button>써보고 순위</button>
+                            <button>구하고 순위</button>
+                        </div>
+                        <ul class='nickname_list'>
+                            <li>
+                                <button class='nickname_item type'>
+                                    <span>1</span>
+                                    <p>에어프라이어 렌탈</p>
+                                    <div class='rank_status up'>1</div>
+                                </button>
+                            </li>
+                            <li>
+                                <button class='nickname_item type'>
+                                    <span>2</span>
+                                    <p>노트북21</p>
+                                    <div class='rank_status down'>1</div>
+                                </button>
+                            </li>
+                            <li>
+                                <button class='nickname_item type'>
+                                    <span>3</span>
+                                    <p>노트북렌탈</p>
+                                    <div class='rank_status up'>2</div>
+                                </button>
+                            </li>
+                            <li>
+                                <button class='nickname_item type'>
+                                    <span>4</span>
+                                    <p>냉장고매매</p>
+                                    <div class='rank_status stay'></div>
+                                </button>
+                            </li>
+                            <li>
+                                <button class='nickname_item type'>
+                                    <span>5</span>
+                                    <p>부동산집</p>
+                                    <div class='rank_status new'>NEW</div>
+                                </button>
+                            </li>
+                            <li>
+                                <button class='nickname_item type'>
+                                    <span>6</span>
+                                    <p>천막렌탈</p>
+                                    <div class='rank_status stay'></div>
+                                </button>
+                            </li>
+                            <li>
+                                <button class='nickname_item type'>
+                                    <span>7</span>
+                                    <p>노트북중고</p>
+                                    <div class='rank_status new'>NEW</div>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 이벤트 -->
+            <div class="event_box">
+                <div class='event_title'>
+                    <p>이</p>
+                    <p>벤</p>
+                    <p>트</p>
+                </div>
+                <div class='event_list clear_fix'>
+                    <div>
+                        <div class='event_num'>
+                            <p>
+                                <span>01</span>
+                                MISSION
+                            </p>
+                        </div>
+                        <a href='#'>결과보기</a>
+                    </div>
+                    <div>
+                        <div class='event_num'>
+                            <p>
+                                <span>02</span>
+                                MISSION
+                            </p>
+                        </div>
+                        <a href='#'>결과보기</a>
+                    </div>
+                    <div>
+                        <div class='event_num'>
+                            <p>
+                                <span>03</span>
+                                MISSION
+                            </p>
+                        </div>
+                        <a href='#'>결과보기</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 카테고리 -->
+            <div class="category_box">
+                <p>카테고리</p>
+                <ul>
+                    <li class="category_list">
+                        <p>
+                            자동차 / 중장비<span></span>특수장비 / 오토바이
+                        </p>
+                        <button onclick='location.href = "./html/list.html"'>10 MORE ></button>
+                    </li>
+                    <li class="category_list">
+                        <p>공구 / 장비 / 건설</p>
+                        <button onclick='location.href = "./html/list.html"'>10 MORE ></button>
+                    </li>
+                    <li class="category_list">
+                        <p>디지털 / 가전</p>
+                        <button onclick='location.href = "./html/list.html"'>10 MORE ></button>
+                    </li>
+                    <li class="category_list">
+                        <p>종합렌탈 / 이벤트</p>
+                        <button onclick='location.href = "./html/list.html"'>10 MORE ></button>
+                    </li>
+                    <li class="category_list">
+                        <p>부동산 / 숙박</p>
+                        <button onclick='location.href = "./html/list.html"'>10 MORE ></button>
+                    </li>
+                    <li class="category_list">
+                        <p>스포츠 / 레저 / 여행</p>
+                        <button onclick='location.href = "./html/list.html"'>10 MORE ></button>
+                    </li>
+                    <li class="category_list">
+                        <p>어린이 / 유아</p>
+                        <button onclick='location.href = "./html/list.html"'>10 MORE ></button>
+                    </li>
+                    <li class="category_list">
+                        <p>건강 / 생활용품</p>
+                        <button onclick='location.href = "./html/list.html"'>10 MORE ></button>
+                    </li>
+                    <li class="category_list">
+                        <p>
+                            가구 / 인테리어<span></span>/ 소품
+                        </p>
+                        <button onclick='location.href = "./html/list.html"'>10 MORE ></button>
+                    </li>
+                    <li class="category_list">
+                        <p>의류 / 잡화</p>
+                        <button onclick='location.href = "./html/list.html"'>10 MORE ></button>
+                    </li>
+                    <li class="category_list">
+                        <p>인력 / 생활 / 나눔</p>
+                        <button onclick='location.href = "./html/list.html"'>10 MORE ></button>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer">
+                <div>
+                    <a href='./html/info_usage.html'>이용약관</a>
+                    <a href='./html/info_privacy.html'>개인정보처리방침</a>
+                    <a href='./html/info_location.html'>위치기반서비스 이용약관</a>
+                    <a href='#'>주식회사 쇼핑몰</a>
+                </div>
+                <div>
+                    <p class='address'>주소 : 서울특별시 주소 (여의도동, 한강시민공원)</p>
+                    <p>이메일 : 쇼핑몰@naver.com</p>
+                </div>
+                <div>
+                    <p>(c) 쇼핑몰, All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+        <!-- CONTENTS END -->
+
+        <script type='text/javascript' src='./js/main.js'></script>
+    </div>
+</body>
+
+</html>

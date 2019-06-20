@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>쇼핑몰- 상품 상세페이지</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Noto+Sans+KR' rel='stylesheet'>
+    <link rel='stylesheet' href='../css/sub.css'>
+    <link rel='stylesheet' href='../css/responsive.css'>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+</head>
+
+<body>
+    <div id='wrap'>
+        <!-- HEADER -->
+        <div class='header_box'>
+            <div class='header clear_fix'>
+                <div class='logo_box'>
+                    <a href='../index.html'>
+                        <img src='../img/logo.png' alt=' '>
+                    </a>
+                </div>
+                <ul class='gnb'>
+                    <li><a href='./mypage.html#interest'>관심상품</a></li>
+                    <li><a href='./advertisement.html'>광고 문의</a></li>
+                    <li><a href='./design.html'>디자인 의뢰</a></li>
+                    <li><a href='./board.html'>게시판</a></li>
+                    <li><a href='./faq.html'>FAQ</a></li>
+                </ul>
+                <div class='util_box clear_fix'>
+                    <div onmouseover='my_menu_open()' onmouseout='my_menu_close()'>
+                        <ul class='my_menu'>
+                            <li>
+                                <a href='./mypage.html#product'>
+                                    <span class='my_icon_box'><img src='../img/my_ic1.png' alt=' '></span>
+                                    <p>상품관리</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='./mypage.html#interest'>
+                                    <span class='my_icon_box'><img src='../img/my_ic2.png' alt=' '></span>
+                                    <p>관심상품</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='./mypage.html#history'>
+                                    <span class='my_icon_box'><img src='../img/my_ic3.png' alt=' '></span>
+                                    <p>렌탈내역</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='./mypage.html#nickname'>
+                                    <span class='my_icon_box'><img src='../img/my_ic4.png' alt=' '></span>
+                                    <p>닉네임<span></span>관리</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='./mypage.html#keyword'>
+                                    <span class='my_icon_box'><img src='../img/my_ic5.png' alt=' '></span>
+                                    <p>키워드<span></span>관리</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='./mypage.html#point' class='line'>
+                                    <span class='my_icon_box'><img src='../img/my_ic6.png' alt=' '></span>
+                                    <p>적립금<span></span>관리</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <button class='my_btn'>MY</button>
+                    </div>
+                    <!-- <button>로그인</button> -->
+                    <button class='search'></button>
+                    <input type='text' name='' id=''>
+                </div>
+            </div>
+        </div>
+        <!-- HEADER END -->
+
+        <!-- CONTENTS -->
+        <div class='contents'>
+            <div class='detail_product clear_fix'>
+                <div class='slider'>
+                    <div><img src='../img/product_1.jpg' alt=' '></div>
+                    <div><img src='../img/product_1.jpg' alt=' '></div>
+                    <div><img src='../img/product_1.jpg' alt=' '></div>
+                    <div><img src='../img/product_1.jpg' alt=' '></div>
+                </div>
+                <div class='detail_summary'>
+                    <p class='summary_type'>대여가능</p>
+                    <p class='detail_title'>원탁테이블</p>
+                    <div class='detail_additional clear_fix'>
+                        <p>상품분류 : 종합렌탈/이벤트 > 이벤트/천막/테이블</p>
+                        <div class='additional_review clear_fix'>
+                            <p>5/5</p>
+                            <span><img src='../img/star_full.png' alt=' '></span>
+                            <span><img src='../img/star_full.png' alt=' '></span>
+                            <span><img src='../img/star_full.png' alt=' '></span>
+                            <span><img src='../img/star_full.png' alt=' '></span>
+                            <span><img src='../img/star_full.png' alt=' '></span>
+                        </div>
+                    </div>
+                </div>
+                <div class='detail_seller'>
+                    <span><img src='../img/ic_orange.png' alt=' '></span>
+                    <p>이름</p>
+                    <p class='nick'>공기청정기 (닉네임 순위 20위)</p>
+                    <p class='address'>서울특별시 금천구 가산디지털로 14 (가산동)</p>
+                </div>
+                <div class='detail_option'>
+                    <div>
+                        <p class='option_type'>가격</p>
+                        <p class='option_value'>30,000원</p>
+                    </div>
+                    <div>
+                        <p class='option_type'>대여 날짜</p>
+                        <div class='option_value date'>
+                            <input type='date' name='' id='' min='2019-03-01' max='2099-12-31'>-<input type='date' name='' id='' min='2019-03-01' max='2099-12-31'>
+                        </div>
+                    </div>
+                    <div>
+                        <p class='option_type'>필요 개수</p>
+                        <div class='option_value amount clear_fix'>
+                            <button></button>
+                            <input type='text' name='' id='' value='1'>
+                            <button></button>
+                        </div>
+                    </div>
+                </div>
+                <div class='btn_area'>
+                    <button>신청하기</button>
+                    <button class='call'>전화로 문의하기</button>
+                </div>
+            </div>
+            <div class='detail_info'>
+                <p class='detail_info_title'>물품 정보</p>
+                <div class='info_size'>
+                    <p class='info_subtitle'>사이즈</p>
+                    <p>
+                        가로 200<span></span> 세로 200<span></span> 높이 200
+                    </p>
+                </div>
+                <div class='info_explain'>
+                    <p class='info_subtitle'>상세 설명</p>
+                    <p>
+                        소프시스에서 나온 접이식 테이블입니다.<span></span>
+                        접으면 바처럼 사용도 가능하고 반만 펴서 혼자도 사용 가능합니다.<span></span>
+                        오셔서 가져가실 수 있으면 싸게 가져가시면 좋을 것 같습니다.
+                    </p>
+                    <div class='explain_more'>
+                        <div>
+                            자세히 자세히 자세히<br>자세히 자세히 자세히<br>자세히 자세히 자세히<br>자세히 자세히 자세히<br>자세히 자세히 자세히<br>자세히 자세히 자세히
+                        </div>
+                        <button onclick='explain_more()'>자세히 보기</button>
+                    </div>
+                </div>
+            </div>
+            <div class='detail_reply'>
+                <div>
+                    <div class='detail_reply_box'>
+                        <p class='reply_title'>
+                            댓글 <span>2</span>
+                        </p>
+                        <div>
+                            <div class='reply_writer clear_fix'>
+                                <span><img src='../img/ic_profile.png' alt=' '></span>
+                                <p cleas='clear_fix'>
+                                    <span class='name'>SUN HEE /</span>
+                                    <span class='nick'> 냉장고렌탈</span>
+                                    <span class='location'>계양구 작전동</span>
+                                    <span class='time'>2시간 전</span>
+                                </p>
+                            </div>
+                            <div class='reply_content'>
+                                <p>원탁 테이블 일주일 대여 가능한가요?</p>
+                                <button>답글보기</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='detail_review_box'>
+                        <p class='review_title'>
+                            후기 <span>80</span>개
+                        </p>
+                        <div class='review_star'>
+                            <span><img src='../img/star_full.png' alt=' '></span>
+                            <span><img src='../img/star_full.png' alt=' '></span>
+                            <span><img src='../img/star_full.png' alt=' '></span>
+                            <span><img src='../img/star_full.png' alt=' '></span>
+                            <span><img src='../img/star_full.png' alt=' '></span>
+                        </div>
+                        <button>평가하러 가기</button>
+                        <div class='detail_review_more clear_fix'>
+                            <div class='star_box'>
+                                <p>정확성</p>
+                                <span><img src='../img/star_full.png' alt=' '></span>
+                                <span><img src='../img/star_full.png' alt=' '></span>
+                                <span><img src='../img/star_full.png' alt=' '></span>
+                                <span><img src='../img/star_full.png' alt=' '></span>
+                                <span><img src='../img/star_full.png' alt=' '></span>
+                            </div>
+                            <div class='star_box'>
+                                <p>가치</p>
+                                <span><img src='../img/star_full.png' alt=' '></span>
+                                <span><img src='../img/star_full.png' alt=' '></span>
+                                <span><img src='../img/star_full.png' alt=' '></span>
+                                <span><img src='../img/star_full.png' alt=' '></span>
+                                <span><img src='../img/star_full.png' alt=' '></span>
+                            </div>
+                            <div class='star_box'>
+                                <p>의사소통</p>
+                                <span><img src='../img/star_full.png' alt=' '></span>
+                                <span><img src='../img/star_full.png' alt=' '></span>
+                                <span><img src='../img/star_full.png' alt=' '></span>
+                                <span><img src='../img/star_full.png' alt=' '></span>
+                                <span><img src='../img/star_full.png' alt=' '></span>
+                            </div>
+                            <div class='star_box'>
+                                <p>친절함</p>
+                                <span><img src='../img/star_full.png' alt=' '></span>
+                                <span><img src='../img/star_full.png' alt=' '></span>
+                                <span><img src='../img/star_full.png' alt=' '></span>
+                                <span><img src='../img/star_full.png' alt=' '></span>
+                                <span><img src='../img/star_empty.png' alt=' '></span>
+                            </div>
+                            <div class='star_box'>
+                                <p>상품상태</p>
+                                <span><img src='../img/star_full.png' alt=' '></span>
+                                <span><img src='../img/star_full.png' alt=' '></span>
+                                <span><img src='../img/star_full.png' alt=' '></span>
+                                <span><img src='../img/star_full.png' alt=' '></span>
+                                <span><img src='../img/star_full.png' alt=' '></span>
+                            </div>
+                            <div class='star_box'>
+                                <p>기타</p>
+                                <span><img src='../img/star_full.png' alt=' '></span>
+                                <span><img src='../img/star_full.png' alt=' '></span>
+                                <span><img src='../img/star_full.png' alt=' '></span>
+                                <span><img src='../img/star_full.png' alt=' '></span>
+                                <span><img src='../img/star_empty.png' alt=' '></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='detail_recommend'>
+                <p class='recommend_title'>
+                    판매자의 대여 상품
+                </p>
+                <div class='recommend_product_list clear_fix'>
+                    <div class='recommend_item'>
+                        <a href='#'>
+                            <span class='recommend_product_img'><img src='../img/product_2.jpg' alt=' '></span>
+                            <p>컨벤션 원탁 테이블</p>
+                            <div class='recommend_product_info clear_fix'>
+                                <p class='recommend_price'>30,000원</p>
+                                <div>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                </div>
+                                <p>계양구 작전동</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class='recommend_item'>
+                        <a href='#'>
+                            <span class='recommend_product_img'><img src='../img/product_3.jpg' alt=' '></span>
+                            <p>마포구 원탁테이블</p>
+                            <div class='recommend_product_info clear_fix'>
+                                <p class='recommend_price'>30,000원</p>
+                                <div>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                </div>
+                                <p>계양구 작전동</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class='recommend_item'>
+                        <a href='#'>
+                            <span class='recommend_product_img'><img src='../img/product_3.jpg' alt=' '></span>
+                            <p>마포구 원탁테이블</p>
+                            <div class='recommend_product_info clear_fix'>
+                                <p class='recommend_price'>30,000원</p>
+                                <div>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                </div>
+                                <p>계양구 작전동</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <button>MORE</button>
+            </div>
+
+            <div class='detail_recommend'>
+                <p class='recommend_title'>
+                    연관 상품
+                </p>
+                <div class='recommend_product_list clear_fix'>
+                    <div class='recommend_item'>
+                        <a href='#'>
+                            <span class='recommend_product_img'><img src='../img/product_2.jpg' alt=' '></span>
+                            <p>컨벤션 원탁 테이블</p>
+                            <div class='recommend_product_info clear_fix'>
+                                <p class='recommend_price'>30,000원</p>
+                                <div>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                </div>
+                                <p>계양구 작전동</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class='recommend_item'>
+                        <a href='#'>
+                            <span class='recommend_product_img'><img src='../img/product_3.jpg' alt=' '></span>
+                            <p>마포구 원탁테이블</p>
+                            <div class='recommend_product_info clear_fix'>
+                                <p class='recommend_price'>30,000원</p>
+                                <div>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                </div>
+                                <p>계양구 작전동</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- <button>MORE</button> -->
+            </div>
+
+            <div class='detail_recommend'>
+                <p class='recommend_title'>
+                    <span>원탁 테이블</span> 관련 추천 상품
+                </p>
+                <div class='recommend_product_list clear_fix'>
+                    <div class='recommend_item'>
+                        <a href='#'>
+                            <span class='recommend_product_img'><img src='../img/product_2.jpg' alt=' '></span>
+                            <p>컨벤션 원탁 테이블</p>
+                            <div class='recommend_product_info clear_fix'>
+                                <p class='recommend_price'>30,000원</p>
+                                <div>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                </div>
+                                <p>계양구 작전동</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class='recommend_item'>
+                        <a href='#'>
+                            <span class='recommend_product_img'><img src='../img/product_3.jpg' alt=' '></span>
+                            <p>마포구 원탁테이블</p>
+                            <div class='recommend_product_info clear_fix'>
+                                <p class='recommend_price'>30,000원</p>
+                                <div>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                </div>
+                                <p>계양구 작전동</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class='recommend_item'>
+                        <a href='#'>
+                            <span class='recommend_product_img'><img src='../img/product_4.jpg' alt=' '></span>
+                            <p>시사회 원탁테이블 대여 시사회 원탁테이블</p>
+                            <div class='recommend_product_info clear_fix'>
+                                <p class='recommend_price'>30,000원</p>
+                                <div>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_empty.png' alt=' '></span>
+                                    <span><img src='../img/star_empty.png' alt=' '></span>
+                                </div>
+                                <p>계양구 작전동</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class='recommend_item'>
+                        <a href='#'>
+                            <span class='recommend_product_img'><img src='../img/product_5.jpg' alt=' '></span>
+                            <p>어린이 원탁테이블</p>
+                            <div class='recommend_product_info clear_fix'>
+                                <p class='recommend_price'>30,000원</p>
+                                <div>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                </div>
+                                <p>계양구 작전동</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class='recommend_item'>
+                        <a href='#'>
+                            <span class='recommend_product_img'><img src='../img/product_6.jpg' alt=' '></span>
+                            <p>흰색 원형테이블</p>
+                            <div class='recommend_product_info clear_fix'>
+                                <p class='recommend_price'>30,000원</p>
+                                <div>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_empty.png' alt=' '></span>
+                                </div>
+                                <p>계양구 작전동</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class='recommend_item'>
+                        <a href='#'>
+                            <span class='recommend_product_img'><img src='../img/product_7.jpg' alt=' '></span>
+                            <p>카페 미니원형테이블</p>
+                            <div class='recommend_product_info clear_fix'>
+                                <p class='recommend_price'>30,000원</p>
+                                <div>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                    <span><img src='../img/star_full.png' alt=' '></span>
+                                </div>
+                                <p>계양구 작전동</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <button>MORE</button>
+            </div>
+
+            <div class='footer'>
+                <div>
+                    <a href='./info_usage.html'>이용약관</a>
+                    <a href='./info_privacy.html'>개인정보처리방침</a>
+                    <a href='./info_location.html'>위치기반서비스 이용약관</a>
+                    <a href='#'>주식회사 쇼핑몰</a>
+                </div>
+                <div>
+                    <p class='address'>주소 : 서울특별시 주소 (여의도동, 한강시민공원)</p>
+                    <p>이메일 : 쇼핑몰@naver.com</p>
+                </div>
+                <div>
+                    <p>(c) 쇼핑몰, All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CONTENTS END -->
+
+    <script type='text/javascript' src='../js/sub.js'></script>
+</body>
+
+</html>

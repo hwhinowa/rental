@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>쇼핑몰- 게시판 상세보기</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Noto+Sans+KR' rel='stylesheet'>
+    <link rel='stylesheet' href='../css/sub.css'>
+    <link rel='stylesheet' href='../css/responsive.css'>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+</head>
+
+<body>
+    <div id='wrap'>
+        <!-- HEADER -->
+        <div class='header_box'>
+            <div class='header clear_fix'>
+                <div class='logo_box'>
+                    <a href='../index.html'>
+                        <img src='../img/logo.png' alt=' '>
+                    </a>
+                </div>
+                <ul class='gnb'>
+                    <li><a href='./mypage.html#interest'>관심상품</a></li>
+                    <li><a href='./advertisement.html'>광고 문의</a></li>
+                    <li><a href='./design.html'>디자인 의뢰</a></li>
+                    <li><a href='./board.html'>게시판</a></li>
+                    <li><a href='./faq.html'>FAQ</a></li>
+                </ul>
+                <div class='util_box clear_fix'>
+                    <div onmouseover='my_menu_open()' onmouseout='my_menu_close()'>
+                        <ul class='my_menu'>
+                            <li>
+                                <a href='./mypage.html#product'>
+                                    <span class='my_icon_box'><img src='../img/my_ic1.png' alt=' '></span>
+                                    <p>상품관리</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='./mypage.html#interest'>
+                                    <span class='my_icon_box'><img src='../img/my_ic2.png' alt=' '></span>
+                                    <p>관심상품</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='./mypage.html#history'>
+                                    <span class='my_icon_box'><img src='../img/my_ic3.png' alt=' '></span>
+                                    <p>렌탈내역</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='./mypage.html#nickname'>
+                                    <span class='my_icon_box'><img src='../img/my_ic4.png' alt=' '></span>
+                                    <p>닉네임<span></span>관리</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='./mypage.html#keyword'>
+                                    <span class='my_icon_box'><img src='../img/my_ic5.png' alt=' '></span>
+                                    <p>키워드<span></span>관리</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='./mypage.html#point' class='line'>
+                                    <span class='my_icon_box'><img src='../img/my_ic6.png' alt=' '></span>
+                                    <p>적립금<span></span>관리</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <button class='my_btn'>MY</button>
+                    </div>
+                    <!-- <button>로그인</button> -->
+                    <button class='search'></button>
+                    <input type='text' name='' id=''>
+                </div>
+            </div>
+        </div>
+        <!-- HEADER END -->
+
+        <!-- CONTENTS -->
+        <div class='contents' id='board'>
+            <!-- 게시판 - TOP -->
+            <div class='ad_top'>
+                <h1>게시판</h1>
+                <div class='ad_type'>
+                    <button onclick=''>공지사항</button>
+                    <button onclick='' class='active'>QNA</button>
+                </div>
+            </div>
+
+            <div class='board_detail_box edit'>
+                <p class="location_comment">홈 > QNA</p>
+                <div class='board_edit_area clear_fix'>
+                    <p class="board_edit_type">옵션</p>
+                    <div><input type="checkbox" name="" id="">비밀글</div>
+                </div>
+                <div class='board_edit_area clear_fix'>
+                    <p class="board_edit_type">제목</p>
+                    <input type="text" name="" id="" placeholder='제목을 입력해주세요'>
+                </div>
+                <div class='board_edit_area clear_fix'>
+                    <textarea name="" id="" placeholder="내용을 입력해주세요"></textarea>
+                </div>
+                <div class='board_edit_area clear_fix'>
+                    <p class="board_edit_type">첨부파일</p>
+                    <input type="file" name="" id="">
+                </div>
+
+                <div class="board_btn_area clear_fix">
+                    <button>다음글</button>
+                    <button class='btn_right' onclick='location.href = "./board.html"'>목록보기</button>
+                    <button class='btn_right' onclick='location.href = "./board_edit.html"'>등록하기</button>
+                </div>
+
+                <div class='board_search_box clear_fix'>
+                    <select name="" id="">
+                        <option value="제목">제목</option>
+                        <option value="작성자">작성자</option>
+                        <option value="제목+작성자">제목+작성자</option>
+                    </select>
+                    <input type="text" name="" id="" placeholder="검색어를 입력해주세요">
+                    <button>검색</button>
+                </div>
+            </div>
+
+            <div class='footer'>
+                <div>
+                    <a href='./info_usage.html'>이용약관</a>
+                    <a href='./info_privacy.html'>개인정보처리방침</a>
+                    <a href='./info_location.html'>위치기반서비스 이용약관</a>
+                    <a href='#'>주식회사 쇼핑몰</a>
+                </div>
+                <div>
+                    <p class='address'>주소 : 서울특별시 주소 (여의도동, 한강시민공원)</p>
+                    <p>이메일 : 쇼핑몰@naver.com</p>
+                </div>
+                <div>
+                    <p>(c) 쇼핑몰, All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CONTENTS END -->
+
+    <script type='text/javascript' src='../js/sub.js'></script>
+</body>
+
+</html>

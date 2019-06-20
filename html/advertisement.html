@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>쇼핑몰- 광고 문의</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Noto+Sans+KR' rel='stylesheet'>
+    <link rel='stylesheet' href='../css/sub.css'>
+    <link rel='stylesheet' href='../css/responsive.css'>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+</head>
+
+<body>
+    <div id='wrap'>
+        <!-- HEADER -->
+        <div class='header_box'>
+            <div class='header clear_fix'>
+                <div class='logo_box'>
+                    <a href='../index.html'>
+                        <img src='../img/logo.png' alt=' '>
+                    </a>
+                </div>
+                <ul class='gnb'>
+                    <li><a href='./mypage.html#interest'>관심상품</a></li>
+                    <li><a href='./advertisement.html'>광고 문의</a></li>
+                    <li><a href='./design.html'>디자인 의뢰</a></li>
+                    <li><a href='./board.html'>게시판</a></li>
+                    <li><a href='./faq.html'>FAQ</a></li>
+                </ul>
+                <div class='util_box clear_fix'>
+                    <div onmouseover='my_menu_open()' onmouseout='my_menu_close()'>
+                        <ul class='my_menu'>
+                            <li>
+                                <a href='./mypage.html#product'>
+                                    <span class='my_icon_box'><img src='../img/my_ic1.png' alt=' '></span>
+                                    <p>상품관리</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='./mypage.html#interest'>
+                                    <span class='my_icon_box'><img src='../img/my_ic2.png' alt=' '></span>
+                                    <p>관심상품</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='./mypage.html#history'>
+                                    <span class='my_icon_box'><img src='../img/my_ic3.png' alt=' '></span>
+                                    <p>렌탈내역</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='./mypage.html#nickname'>
+                                    <span class='my_icon_box'><img src='../img/my_ic4.png' alt=' '></span>
+                                    <p>닉네임<span></span>관리</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='./mypage.html#keyword'>
+                                    <span class='my_icon_box'><img src='../img/my_ic5.png' alt=' '></span>
+                                    <p>키워드<span></span>관리</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='./mypage.html#point' class='line'>
+                                    <span class='my_icon_box'><img src='../img/my_ic6.png' alt=' '></span>
+                                    <p>적립금<span></span>관리</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <button class='my_btn'>MY</button>
+                    </div>
+                    <!-- <button>로그인</button> -->
+                    <button class='search'></button>
+                    <input type='text' name='' id=''>
+                </div>
+            </div>
+        </div>
+        <!-- HEADER END -->
+
+        <!-- CONTENTS -->
+        <div class='contents'>
+            <!-- 광고문의 - TOP -->
+            <div class='ad_top'>
+                <h1>광고문의</h1>
+                <div class='ad_type'>
+                    <button onclick='ad_tab(this, "투자")' class='active'>투자문의</button>
+                    <button onclick='ad_tab(this, "프리미엄")'>프리미엄 광고문의</button>
+                    <button onclick='ad_tab(this, "배너")'>배너광고</button>
+                </div>
+                <div class='ad_info clear_fix'>
+                    <span><img src='../img/ad_bubble.png' alt=' '></span>
+                    <p>
+                        투자 / 프리미엄 광고 / 배너 광고에 관한 광고 제안 및 문의 내용이 있으시면 아래 양식을 작성하여 보내주십시오.<span></span> 단, 광고와 관련이 없는 문의
+                        내용일 경우 답변을 드리지 않을 수도 있습니다.
+                    </p>
+                </div>
+            </div>
+
+            <div class='ad_input_box'>
+                <!-- 광고문의 - 투자문의 -->
+                <div class='tabs clear_fix' id='investment'>
+                    <p>* 모든 항목은 필수입력 항목이므로 모두 입력하여 주십시오.</p>
+                    <div class='input_type mg_r clear_fix'>
+                        <p>문의 분야</p>
+                        <select name='' id=''>
+                            <option value='투자문의' selected='selected'>투자문의</option>
+                            <option value='프리미엄 광고문의'>프리미엄 광고문의</option>
+                            <option value='배너광고'>배너광고</option>
+                        </select>
+                    </div>
+                    <div class='input_type clear_fix'>
+                        <p>회사명</p>
+                        <input type='text'>
+                    </div>
+                    <div class='input_type mg_r clear_fix'>
+                        <p>연락처</p>
+                        <input type='text'>
+                    </div>
+                    <div class='input_type'>
+                        <p>담당자명</p>
+                        <input type='text'>
+                    </div>
+                    <div class='input_type mg_r clear_fix'>
+                        <p>이메일</p>
+                        <input type='text'>
+                    </div>
+                    <div class='input_type clear_fix'>
+                        <p>투자예산</p>
+                        <input type='text'>
+                    </div>
+                    <div class='input_type full clear_fix'>
+                        <p>내용</p>
+                        <textarea name='' id='' cols='30' rows='10' placeholder='문의하실 내용을 입력하세요.'></textarea>
+                    </div>
+                </div>
+
+                <!-- 광고문의 - 프리미엄 광고문의 -->
+                <div class='tabs clear_fix' id='premium'>
+                    <p>* 모든 항목은 필수입력 항목이므로 모두 입력하여 주십시오.</p>
+                    <div class='input_type mg_r clear_fix'>
+                        <p>문의 분야</p>
+                        <select name='' id=''>
+                            <option value='투자문의'>투자문의</option>
+                            <option value='프리미엄 광고문의' selected='selected'>프리미엄 광고문의</option>
+                            <option value='배너광고'>배너광고</option>
+                        </select>
+                    </div>
+                    <div class='input_type clear_fix'>
+                        <p>회사명</p>
+                        <input type='text'>
+                    </div>
+                    <div class='input_type mg_r clear_fix'>
+                        <p>연락처</p>
+                        <input type='text'>
+                    </div>
+                    <div class='input_type'>
+                        <p>담당자명</p>
+                        <input type='text'>
+                    </div>
+                    <div class='input_type mg_r clear_fix'>
+                        <p>이메일</p>
+                        <input type='text'>
+                    </div>
+                    <div class='input_type clear_fix'>
+                        <p>투자예산</p>
+                        <input type='text'>
+                    </div>
+                    <div class='input_type full clear_fix'>
+                        <p>내용</p>
+                        <textarea name='' id='' cols='30' rows='10' placeholder='문의하실 내용을 입력하세요.'></textarea>
+                    </div>
+                </div>
+
+                <!-- 광고문의 - 배너광고 -->
+                <div class='tabs clear_fix' id='banner'>
+                    <p>* 모든 항목은 필수입력 항목이므로 모두 입력하여 주십시오.</p>
+                    <div class='input_type mg_r clear_fix'>
+                        <p>문의 분야</p>
+                        <select name='' id=''>
+                            <option value='투자문의'>투자문의</option>
+                            <option value='프리미엄 광고문의'>프리미엄 광고문의</option>
+                            <option value='배너광고' selected='selected'>배너광고</option>
+                        </select>
+                    </div>
+                    <div class='input_type clear_fix'>
+                        <p>제품 카테고리</p>
+                        <input type='text'>
+                    </div>
+                    <div class='input_type mg_r clear_fix'>
+                        <p>회사명</p>
+                        <input type='text'>
+                    </div>
+                    <div class='input_type'>
+                        <p>연락처</p>
+                        <input type='text'>
+                    </div>
+                    <div class='input_type mg_r clear_fix'>
+                        <p>담당자명</p>
+                        <input type='text'>
+                    </div>
+                    <div class='input_type clear_fix'>
+                        <p>이메일</p>
+                        <input type='text'>
+                    </div>
+                    <div class='input_type mg_r clear_fix'>
+                        <p>투자예산</p>
+                        <input type='text'>
+                    </div>
+                    <div class='input_type full clear_fix'>
+                        <p>내용</p>
+                        <textarea name='' id='' cols='30' rows='10' placeholder='문의하실 내용을 입력하세요.'></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class='agree_box'>
+                <p class='agree_title'><span>&#91;필수&#93;</span> 개인정보 수집 및 이용 동의</p>
+                <p class='agree_text'>
+                    투자문의를 위해 개인정보를 수집합니다.<span></span> 수집한 개인정보는 이외의 목적으로는 사용하지 않으며, 수집일 기준 30일 후 파기합니다.<span></span>
+                    개인정보의 수집 및 이용에 대한 동의를 거부할 수 있으며, 거부시 투자문의는 접수되지 않습니다.
+                </p>
+                <div class='agree_area'>
+                    <input type='checkbox' name='agree' id='agree'>
+                    <label for='agree'>개인정보 수집˙이용에 동의합니다.</label>
+                </div>
+                <div class='btn_area'>
+                    <button class='highlight'>문의하기</button>
+                    <button>취소</button>
+                </div>
+            </div>
+
+            <div class='footer'>
+                <div>
+                    <a href='./info_usage.html'>이용약관</a>
+                    <a href='./info_privacy.html'>개인정보처리방침</a>
+                    <a href='./info_location.html'>위치기반서비스 이용약관</a>
+                    <a href='#'>주식회사 쇼핑몰</a>
+                </div>
+                <div>
+                    <p class='address'>주소 : 서울특별시 주소 (여의도동, 한강시민공원)</p>
+                    <p>이메일 : 쇼핑몰@naver.com</p>
+                </div>
+                <div>
+                    <p>(c) 쇼핑몰, All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CONTENTS END -->
+
+    <script type='text/javascript' src='../js/sub.js'></script>
+</body>
+
+</html>

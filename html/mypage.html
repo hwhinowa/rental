@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>쇼핑몰- 마이페이지</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Noto+Sans+KR' rel='stylesheet'>
+    <link rel='stylesheet' href='../css/sub.css'>
+    <link rel='stylesheet' href='../css/responsive.css'>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+</head>
+
+<body>
+    <div id='wrap'>
+        <!-- HEADER -->
+        <div class='header_box'>
+            <div class='header clear_fix'>
+                <div class='logo_box'>
+                    <a href='../index.html'>
+                        <img src='../img/logo.png' alt=' '>
+                    </a>
+                </div>
+                <ul class='gnb'>
+                    <li><a href='./mypage.html#interest'>관심상품</a></li>
+                    <li><a href='./advertisement.html'>광고 문의</a></li>
+                    <li><a href='./design.html'>디자인 의뢰</a></li>
+                    <li><a href='./board.html'>게시판</a></li>
+                    <li><a href='./faq.html'>FAQ</a></li>
+                </ul>
+                <div class='util_box clear_fix'>
+                    <div onmouseover='my_menu_open()' onmouseout='my_menu_close()'>
+                        <ul class='my_menu'>
+                            <li>
+                                <a onclick='mypage_init(true, "product")'>
+                                    <span class='my_icon_box'><img src='../img/my_ic1.png' alt=' '></span>
+                                    <p>상품관리</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a onclick='mypage_init(true, "interest")'>
+                                    <span class='my_icon_box'><img src='../img/my_ic2.png' alt=' '></span>
+                                    <p>관심상품</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a onclick='mypage_init(true, "history")'>
+                                    <span class='my_icon_box'><img src='../img/my_ic3.png' alt=' '></span>
+                                    <p>렌탈내역</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a onclick='mypage_init(true, "nickname")'>
+                                    <span class='my_icon_box'><img src='../img/my_ic4.png' alt=' '></span>
+                                    <p>닉네임<span></span>관리</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a onclick='mypage_init(true, "keyword")'>
+                                    <span class='my_icon_box'><img src='../img/my_ic5.png' alt=' '></span>
+                                    <p>키워드<span></span>관리</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a onclick='mypage_init(true, "point")'class='line'>
+                                    <span class='my_icon_box'><img src='../img/my_ic6.png' alt=' '></span>
+                                    <p>적립금<span></span>관리</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <button class='my_btn'>MY</button>
+                    </div>
+                    <!-- <button>로그인</button> -->
+                    <button class='search'></button>
+                    <input type='text' name='' id=''>
+                </div>
+            </div>
+        </div>
+        <!-- HEADER END -->
+
+        <!-- CONTENTS -->
+        <div class='contents'>
+            <div class='contents_wrap'>
+                <!-- 마이페이지 - TAB AREA -->
+                <div class='mypage_type'>
+                    <div class='btn_box clear_fix'>
+                        <button onclick='mypage_tab(this, "상품관리")' ic='btn_product' class='active'>상품관리</button>
+                        <button onclick='mypage_tab(this, "관심상품")' id='btn_interest'>관심상품</button>
+                        <button onclick='mypage_tab(this, "렌탈내역")' id='btn_history'>렌탈내역</button>
+                        <button onclick='mypage_tab(this, "닉네임관리")' id='btn_nickname'>닉네임관리</button>
+                        <button onclick='mypage_tab(this, "적립금관리")' id='btn_point'>적립금관리</button>
+                        <button onclick='mypage_tab(this, "키워드광고")' id='btn_keyword'>키워드광고</button>
+                    </div>
+                </div>
+
+                <div class='mypage_box'>
+                    <!-- 마이페이지 - 상품관리 -->
+                    <div class='tabs clear_fix' id='product'>
+                        <p class='mypage_title'>
+                            등록된 상품
+                            <span>3<span>상품</span></span>
+                        </p>
+                        <ul>
+                            <li class='product_item'>
+                                <span class='product_image'><img src='../img/best_fryer.png' alt=' '></span>
+                                <p>
+                                    <span>에어 프라이어</span>
+                                    2018.05.13 등록됨
+                                </p>
+                                <button>
+                                    <span>5</span>건의 거래내역
+                                </button>
+                            </li>
+                            <li class='product_item'>
+                                <span class='product_image'><img src='../img/best_ipad.png' alt=' '></span>
+                                <p>
+                                    <span>아이패드 프로 3세대</span>
+                                    2018.05.13 등록됨
+                                </p>
+                                <button>
+                                    <span>3</span>건의 거래내역
+                                </button>
+                            </li>
+                            <li class='product_item'>
+                                <span class='product_image'><img src='../img/best_carrier.png' alt=' '></span>
+                                <p>
+                                    <span>여행용 가방</span>
+                                    2018.05.13 등록됨
+                                </p>
+                                <button>
+                                    <span>10</span>건의 거래내역
+                                </button>
+                            </li>
+                            <li class='product_add mg_r'>
+                                <a href='./product_register.html'>
+                                    <span>+</span>
+                                    상품 추가
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 마이페이지 - 관심상품 -->
+                    <div class='tabs clear_fix' id='interest'>
+                        <p class='mypage_title'>
+                            등록된 상품
+                            <span>4<span>상품</span></span>
+                        </p>
+                        <ul>
+                            <li class='product_item'>
+                                <span class='product_image'><img src='../img/best_fryer.png' alt=' '></span>
+                                <p>
+                                    <span>에어 프라이어</span>
+                                    2018.05.13 등록됨
+                                </p>
+                                <div class='price'>
+                                    <span>20,000원</span>
+                                    <button onclick='set_interest(this)'>관심</button>
+                                </div>
+                            </li>
+                            <li class='product_item'>
+                                <span class='product_image'><img src='../img/best_ipad.png' alt=' '></span>
+                                <p>
+                                    <span>아이패드 프로 3세대</span>
+                                    2018.05.13 등록됨
+                                </p>
+                                <div class='price'>
+                                    <span>20,000원</span>
+                                    <button onclick='set_interest(this)'>관심</button>
+                                </div>
+                            </li>
+                            <li class='product_item'>
+                                <span class='product_image'><img src='../img/best_carrier.png' alt=' '></span>
+                                <p>
+                                    <span>여행용 가방</span>
+                                    2018.05.13 등록됨
+                                </p>
+                                <div class='price'>
+                                    <span>20,000원</span>
+                                    <button onclick='set_interest(this)'>관심</button>
+                                </div>
+                            </li>
+                            <li class='product_item'>
+                                <span class='product_image'><img src='../img/best_carrier.png' alt=' '></span>
+                                <p>
+                                    <span>여행용 가방</span>
+                                    2018.05.13 등록됨
+                                </p>
+                                <div class='price'>
+                                    <span>20,000원</span>
+                                    <button onclick='set_interest(this)'>관심</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 마이페이지 - 렌탈내역 -->
+                    <div class='tabs clear_fix' id='history'>
+                        <p class='mypage_title'>
+                            렌탈내역
+                            <span>5<span>건</span></span>
+                        </p>
+                        <table class='history_table'>
+                            <thead>
+                                <tr>
+                                    <th class='history_img'>상품 사진</th>
+                                    <th class='history_name'>제품명</th>
+                                    <th class='history_location'>위치</th>
+                                    <th class='history_price'>금액</th>
+                                    <th class='history_type'>체험 유형</th>
+                                    <th class='history_date'>날짜</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class='history_item'>
+                                    <td class='history_img'>
+                                        <span><img src='../img/best_carriage.png' alt=' '></span>
+                                    </td>
+                                    <td class='history_name'>
+                                        <p>
+                                            <strong>유모차</strong>
+                                            카멜라 라온 A2-s 유모차
+                                            <span>어린이 / 유아 > 유아용품</span>
+                                        </p>
+                                        <div class='history_more clear_fix'>
+                                            <p>
+                                                제품 설명 : <span>'고소영 유모차'로 유명 간단한 양대면, 홀딩 부드러운 핸들링이 장점, 스테인리스 프레임에서 오는 고급스러움</span>
+                                            </p>
+                                            <p>
+                                                제품 무게 : <span>9kg</span>
+                                            </p>
+                                            <p>
+                                                사용 연령 : <span>신생아~48개월(20kg)</span>
+                                            </p>
+                                            <p class='history_dealer_text'>거래자 :</p>
+                                            <div class='history_dealer clear_fix'>
+                                                <span><img src='../img/nick_person1.png' alt=' '></span>
+                                                <p class='history_dealer_profile'>
+                                                    <strong>황정민</strong>님께
+                                                    <span>세탁기렌탈</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <button onclick='history_more(this)'>제품 설명 더보기</button>
+                                    </td>
+                                    <td class='history_location'>
+                                        <p>200Km / 구로동</p>
+                                    </td>
+                                    <td class='history_price'>
+                                        <p>20,000</p>
+                                    </td>
+                                    <td class='history_type'>
+                                        <p class='active'>빌리고</p>
+                                        <p>써보고</p>
+                                    </td>
+                                    <td class='history_date'>
+                                        <p>2018.05.05</p>
+                                    </td>
+                                </tr>
+                                <tr class='history_item'>
+                                    <td class='history_img'>
+                                        <span><img src='../img/best_fryer.png' alt=' '></span>
+                                    </td>
+                                    <td class='history_name'>
+                                        <p>
+                                            <strong>유모차</strong>
+                                            카멜라 라온 A2-s 유모차
+                                            <span>어린이 / 유아 > 유아용품</span>
+                                        </p>
+                                        <div class='history_more clear_fix'>
+                                            <p>
+                                                제품 설명 : <span>'고소영 유모차'로 유명 간단한 양대면, 홀딩 부드러운 핸들링이 장점, 스테인리스 프레임에서 오는 고급스러움</span>
+                                            </p>
+                                            <p>
+                                                제품 무게 : <span>9kg</span>
+                                            </p>
+                                            <p>
+                                                사용 연령 : <span>신생아~48개월(20kg)</span>
+                                            </p>
+                                            <p class='history_dealer_text'>거래자 :</p>
+                                            <div class='history_dealer clear_fix'>
+                                                <span><img src='../img/nick_person1.png' alt=' '></span>
+                                                <p class='history_dealer_profile'>
+                                                    <strong>황정민</strong>님께
+                                                    <span>세탁기렌탈</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <button onclick='history_more(this)'>제품 설명 더보기</button>
+                                    </td>
+                                    <td class='history_location'>
+                                        <p>200Km / 구로동</p>
+                                    </td>
+                                    <td class='history_price'>
+                                        <p>20,000</p>
+                                    </td>
+                                    <td class='history_type'>
+                                        <p class='active'>빌리고</p>
+                                        <p>써보고</p>
+                                    </td>
+                                    <td class='history_date'>
+                                        <p>2018.05.05</p>
+                                    </td>
+                                </tr>
+                                <tr class='history_item'>
+                                    <td class='history_img'>
+                                        <span><img src='../img/best_refrigerator.png' alt=' '></span>
+                                    </td>
+                                    <td class='history_name'>
+                                        <p>
+                                            <strong>유모차</strong>
+                                            카멜라 라온 A2-s 유모차
+                                            <span>어린이 / 유아 > 유아용품</span>
+                                        </p>
+                                        <div class='history_more clear_fix'>
+                                            <p>
+                                                제품 설명 : <span>'고소영 유모차'로 유명 간단한 양대면, 홀딩 부드러운 핸들링이 장점, 스테인리스 프레임에서 오는 고급스러움</span>
+                                            </p>
+                                            <p>
+                                                제품 무게 : <span>9kg</span>
+                                            </p>
+                                            <p>
+                                                사용 연령 : <span>신생아~48개월(20kg)</span>
+                                            </p>
+                                            <p class='history_dealer_text'>거래자 :</p>
+                                            <div class='history_dealer clear_fix'>
+                                                <span><img src='../img/nick_person1.png' alt=' '></span>
+                                                <p class='history_dealer_profile'>
+                                                    <strong>황정민</strong>님께
+                                                    <span>세탁기렌탈</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <button onclick='history_more(this)'>제품 설명 더보기</button>
+                                    </td>
+                                    <td class='history_location'>
+                                        <p>200Km / 구로동</p>
+                                    </td>
+                                    <td class='history_price'>
+                                        <p>20,000</p>
+                                    </td>
+                                    <td class='history_type'>
+                                        <p class='active'>빌리고</p>
+                                        <p>써보고</p>
+                                    </td>
+                                    <td class='history_date'>
+                                        <p>2018.05.05</p>
+                                    </td>
+                                </tr>
+                                <tr class='history_item'>
+                                    <td class='history_img'>
+                                        <span><img src='../img/best_car.png' alt=' '></span>
+                                    </td>
+                                    <td class='history_name'>
+                                        <p>
+                                            <strong>유모차</strong>
+                                            카멜라 라온 A2-s 유모차
+                                            <span>어린이 / 유아 > 유아용품</span>
+                                        </p>
+                                        <div class='history_more clear_fix'>
+                                            <p>
+                                                제품 설명 : <span>'고소영 유모차'로 유명 간단한 양대면, 홀딩 부드러운 핸들링이 장점, 스테인리스 프레임에서 오는 고급스러움</span>
+                                            </p>
+                                            <p>
+                                                제품 무게 : <span>9kg</span>
+                                            </p>
+                                            <p>
+                                                사용 연령 : <span>신생아~48개월(20kg)</span>
+                                            </p>
+                                            <p class='history_dealer_text'>거래자 :</p>
+                                            <div class='history_dealer clear_fix'>
+                                                <span><img src='../img/nick_person1.png' alt=' '></span>
+                                                <p class='history_dealer_profile'>
+                                                    <strong>황정민</strong>님께
+                                                    <span>세탁기렌탈</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <button onclick='history_more(this)'>제품 설명 더보기</button>
+                                    </td>
+                                    <td class='history_location'>
+                                        <p>200Km / 구로동</p>
+                                    </td>
+                                    <td class='history_price'>
+                                        <p>20,000</p>
+                                    </td>
+                                    <td class='history_type'>
+                                        <p>빌리고</p>
+                                        <p class='active'>써보고</p>
+                                    </td>
+                                    <td class='history_date'>
+                                        <p>2018.05.05</p>
+                                    </td>
+                                </tr>
+                                <tr class='history_item'>
+                                    <td class='history_img'>
+                                        <span><img src='../img/best_ipad.png' alt=' '></span>
+                                    </td>
+                                    <td class='history_name'>
+                                        <p>
+                                            <strong>유모차</strong>
+                                            카멜라 라온 A2-s 유모차
+                                            <span>어린이 / 유아 > 유아용품</span>
+                                        </p>
+                                        <div class='history_more clear_fix'>
+                                            <p>
+                                                제품 설명 : <span>'고소영 유모차'로 유명 간단한 양대면, 홀딩 부드러운 핸들링이 장점, 스테인리스 프레임에서 오는 고급스러움, 홀딩 부드러운 핸들링이 장점, 스테인리스 프레임에서 오는 고급스러움</span>
+                                            </p>
+                                            <p>
+                                                제품 무게 : <span>9kg</span>
+                                            </p>
+                                            <p>
+                                                사용 연령 : <span>신생아~48개월(20kg)</span>
+                                            </p>
+                                            <p class='history_dealer_text'>거래자 :</p>
+                                            <div class='history_dealer clear_fix'>
+                                                <span><img src='../img/nick_person1.png' alt=' '></span>
+                                                <p class='history_dealer_profile'>
+                                                    <strong>황정민</strong>님께
+                                                    <span>세탁기렌탈</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <button onclick='history_more(this)'>제품 설명 더보기</button>
+                                    </td>
+                                    <td class='history_location'>
+                                        <p>200Km / 구로동</p>
+                                    </td>
+                                    <td class='history_price'>
+                                        <p>20,000</p>
+                                    </td>
+                                    <td class='history_type'>
+                                        <p>빌리고</p>
+                                        <p class='active'>써보고</p>
+                                    </td>
+                                    <td class='history_date'>
+                                        <p>2018.05.05</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- 마이페이지 - 닉네임관리 -->
+                    <div class='tabs clear_fix' id='nickname'>
+                        <div class='caution'>
+                            <p class='caution_title'>주의사항</p>
+                            <p>
+                                <span></span>
+                                닉네임 변경 시 오렌지 <strong>10개</strong>가 사용됩니다.
+                            </p>
+                            <p>
+                                <span></span>
+                                오랜지 개수 부족 시 <strong>10,000원</strong>의 포인트가 차감됩니다.
+                            </p>
+                        </div>
+                        <div class='nick_change'>
+                            <p class='change_title'>닉네임 변경</p>
+                            <div class='nick_box1'>
+                                <p>현재 닉네임</p>
+                                <p class='nickname'>공기청정기</p>
+                                <span><img src='../img/ic_orange.png' alt=' '></span>
+                                <p class='orange_amount'><strong>10</strong>개 보유 중</p>
+                            </div>
+                            <div class='nick_box2'>
+                                <input type='text' name='' id='' placeholder='새로운 닉네임을 입력해주세요.'>
+                                <button onclick='popup_open(".points_popup.nick_duplicate")'>중복확인</button>
+                            </div>
+                            <button>저장</button>
+                        </div>
+                        <div class='nick_deal'>
+                            <p class='deal_title'>닉네임 매매 목록</p>
+                            <div class='deal_tabs'>
+                                <div class='active'>
+                                    요청받은 목록
+                                    <span>+3</span>
+                                </div>
+                                <div>
+                                    내가 요청한 목록
+                                    <span>+1</span>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class='deal_user clear_fix'>
+                                        <span><img src='../img/nick_person1.png' alt=' '></span>
+                                        <p>황정민</p>
+                                        <p class='deal_nickname'>세탁기 렌탈</p>
+                                    </div>
+                                    <div class='deal_comment'>
+                                        <p>닉네임 넘겨주세요 ㅋㅋ</p>
+                                        <p class='deal_date'>2018.05.05</p>
+                                    </div>
+                                    <div class='deal_price'>
+                                        <p>10,000원</p>
+                                    </div>
+                                    <div class='deal_btn'>
+                                        <button onclick='popup_open(".points_popup.nick_deal")'>매매 수락</button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='deal_user clear_fix'>
+                                        <span><img src='../img/nick_person2.png' alt=' '></span>
+                                        <p>라미란</p>
+                                        <p class='deal_nickname'>삼성노트북 렌탈</p>
+                                    </div>
+                                    <div class='deal_comment'>
+                                        <p>20만원에 제안합니다.20만원에 제안합니다.20만원에 제안합니다.</p>
+                                        <p class='deal_date'>2018.05.05</p>
+                                    </div>
+                                    <div class='deal_price'>
+                                        <p>200,000원</p>
+                                    </div>
+                                    <div class='deal_btn'>
+                                        <button onclick='popup_open(".points_popup.nick_deal")'>매매 수락</button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='deal_user clear_fix'>
+                                        <span><img src='../img/nick_person3.png' alt=' '></span>
+                                        <p>안정환</p>
+                                        <p class='deal_nickname'>냉장고 렌탈</p>
+                                    </div>
+                                    <div class='deal_comment'>
+                                        <p>닉네임 요청합니다</p>
+                                        <p class='deal_date'>2018.05.05</p>
+                                    </div>
+                                    <div class='deal_price'>
+                                        <p>300,000원</p>
+                                    </div>
+                                    <div class='deal_btn'>
+                                        <button onclick='popup_open(".points_popup.nick_deal")'>매매 수락</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class='points_popup nick_duplicate'>
+                            <div class='popup_content'>
+                                <p>
+                                    <span>에어프라이어</span>
+                                    입력하신 닉네임은 사용하실 수 있습니다.
+                                </p>
+                            </div>
+                            <button onclick='popup_close(this)' class='popup_btn'>확인</button>
+                        </div>
+                        <div class='points_popup nick_deal'>
+                            <div class='popup_content'>
+                                <div class='nick_dealer'>
+                                    <span><img src="../img/nick_person1.png" alt=""></span>
+                                    <p><span>황정민님께</span>세탁기 렌탈</p>
+                                </div>
+                                <p>매매 수락을 하시겠습니까?</p>
+                            </div>
+                            <button onclick='popup_close(this)' class='popup_btn'>예</button>
+                            <button onclick='popup_close(this)' class='popup_btn cancel'>아니요</button>
+                        </div>
+                        <div class="black"></div>
+                    </div>
+
+                    <!-- 마이페이지 - 적립금관리 -->
+                    <div class='tabs clear_fix' id='point'>
+                        <div class='points_content clear_fix'>
+                            <p class='points_title'>내 적립금</p>
+                            <div class="total_points">
+                                <p>총 사용가능한 적립금</p>
+                                <span><img src='../img/ic_price.png' alt=' '></span>
+                                <p class="price">200,000원</p>
+                            </div>
+                            <ul>
+                                <li class="points_item">
+                                    <p>예치금</p>
+                                    <p class="price">900원</p>
+                                </li>
+                                <li class="points_item">
+                                    <p>닉네임 수수료</p>
+                                    <p class="price">1,200원</p>
+                                </li>
+                                <li class="points_item">
+                                    <p>키워드 광고료</p>
+                                    <p class="price">80원</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class='points_content'>
+                            <p class='points_title'>입금 계좌</p>
+                            <p class='account'>국민은행 : 111222333444 (예금주 : 이름)</p>
+                        </div>
+
+                        <div class='points_popup deposit'>
+                            <button class='popup_btn_close' onclick='popup_close(this)'>X</button>
+                            <p class='popup_title'>예치금 신청</p>
+                            <div class='popup_content'>
+                                <p>예치금 충전 금액</p>
+                                <input type='text' name='' id=''>원
+                            </div>
+                            <button class='popup_btn'>예치금 충전하기</button>
+                        </div>
+
+                        <div class='points_popup withdraw'>
+                            <button class='popup_btn_close' onclick='popup_close(this)'>X</button>
+                            <p class='popup_title'>출금 신청</p>
+                            <div class='popup_content'>
+                                <div>
+                                    <p class="popup_content_type">출금 가능총액</p>
+                                    <div class='popup_content_value'>
+                                        <span>200,000원</span> (보유하고 계신 예치금 총액)
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="popup_content_type">출금 요청금액</p>
+                                    <div class='popup_content_value'>
+                                        <input type="text" name="" id="">원
+                                        <input type="checkbox" name="" id="withdraw_check">
+                                        <label for="withdraw_check"></label>출금가능금액 전체
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="popup_content_type">출금계좌</p>
+                                    <div class='popup_content_value'>
+                                        <div>
+                                            <p>은행</p>
+                                            <p>
+                                                국민은행
+                                                <button>계좌변경</button>
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <p>계좌번호</p>
+                                            <p>111222333444</p>
+                                        </div>
+                                        <div>
+                                            <p>예금주명</p>
+                                            <p>이름</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class='popup_btn'>출금신청하기</button>
+                        </div>
+
+                        <div class='black'></div>
+
+                        <div class='btn_area'>
+                            <button onclick='popup_open(".points_popup.deposit")'>예치금 신청</button>
+                            <button onclick='popup_open(".points_popup.withdraw")'>출금 신청</button>
+                        </div>
+                    </div>
+
+                    <!-- 마이페이지 - 키워드광고 -->
+                    <div class='tabs clear_fix' id='keyword'>
+                        <div class='keyword_premium'>
+                            <p class='title'>프리미엄 키워드목록</p>
+                            <table class='keyword_table active'>
+                                <thead>
+                                    <tr>
+                                        <th class='keyword_rank'>광고순위</th>
+                                        <th class='keyword_word'>키워드</th>
+                                        <th class='keyword_product'>상품명</th>
+                                        <th class='keyword_view'>노출횟수</th>
+                                        <th class='keyword_click'>클릭횟수</th>
+                                        <th class='keyword_price'>가격</th>
+                                        <th class='keyword_edit'>광고수정</th>
+                                        <th class='keyword_cancel'>광고중지</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class='keyword_item'>
+                                        <td class='keyword_rank'>30</td>
+                                        <td class='keyword_word'>노트북렌탈</td>
+                                        <td class='edit_row word'>
+                                            <input type="text" name="" id="" value='노트북렌탈'>
+                                        </td>
+                                        <td class='keyword_product'>삼성노트북펜s</td>
+                                        <td class='edit_row product'>
+                                            <input type="text" name="" id="" value='삼성노트북펜s'>
+                                        </td>
+                                        <td class='keyword_view'>1,100</td>
+                                        <td class='keyword_click'>500</td>
+                                        <td class='keyword_price'>36,000</td>
+                                        <td class='edit_row price'>
+                                            <input type="text" name="" id="" value='36,000'>
+                                        </td>
+                                        <td class='keyword_edit'>
+                                            <button onclick='keyword_edit(this)'>
+                                                <img src='../img/btn_ad_edit.png' alt=' '>
+                                            </button>
+                                        </td> 
+                                        <td class='keyword_cancel'>
+                                            <button onclick='popup_open(".points_popup.ad_cancel")'>
+                                                <img src='../img/btn_ad_cancel.png' alt=' '>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class='keyword_item'>
+                                        <td class='keyword_rank'>20</td>
+                                        <td class='keyword_word'>전자레인지</td>
+                                        <td class='edit_row word'>
+                                            <input type="text" name="" id="" value='전자레인지'>
+                                        </td>
+                                        <td class='keyword_product'>LG전자레인지</td>
+                                        <td class='edit_row product'>
+                                            <input type="text" name="" id="" value='LG전자레인지'>
+                                        </td>
+                                        <td class='keyword_view'>1,100</td>
+                                        <td class='keyword_click'>500</td>
+                                        <td class='keyword_price'>36,000</td>
+                                        <td class='edit_row price'>
+                                            <input type="text" name="" id="" value='36,000'>
+                                        </td>
+                                        <td class='keyword_edit'>
+                                            <button onclick='keyword_edit(this)'>
+                                                <img src='../img/btn_ad_edit.png' alt=' '>
+                                            </button>
+                                        </td> 
+                                        <td class='keyword_cancel'>
+                                            <button onclick='popup_open(".points_popup.ad_cancel")'>
+                                                <img src='../img/btn_ad_cancel.png' alt=' '>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class='keyword_item'>
+                                        <td class='keyword_rank'>1</td>
+                                        <td class='keyword_word'>애플</td>
+                                        <td class='edit_row word'>
+                                            <input type="text" name="" id="" value='애플'>
+                                        </td>
+                                        <td class='keyword_product'>아이폰X</td>
+                                        <td class='edit_row product'>
+                                            <input type="text" name="" id="" value='아이폰X'>
+                                        </td>
+                                        <td class='keyword_view'>1,100</td>
+                                        <td class='keyword_click'>500</td>
+                                        <td class='keyword_price'>36,000</td>
+                                        <td class='edit_row price'>
+                                            <input type="text" name="" id="" value='36,000'>
+                                        </td>
+                                        <td class='keyword_edit'>
+                                            <button onclick='keyword_edit(this)'>
+                                                <img src='../img/btn_ad_edit.png' alt=' '>
+                                            </button>
+                                        </td> 
+                                        <td class='keyword_cancel'>
+                                            <button onclick='popup_open(".points_popup.ad_cancel")'>
+                                                <img src='../img/btn_ad_cancel.png' alt=' '>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class='btn_area_keyword'>
+                                <button onclick='keyword_list(this)'>저장하기</button>
+                                <button onclick='keyword_list(this)'>목록으로</button>
+                            </div>
+                        </div>
+                        <div class='keyword_normal'>
+                            <p class='title'>일반 키워드목록</p>
+                            <table class='keyword_table'>
+                                <thead>
+                                    <tr>
+                                        <th class='keyword_rank_n'>예상광고순위</th>
+                                        <th class='keyword_word_n'>키워드</th>
+                                        <th class='keyword_product_n'>상품명</th>
+                                        <th class='keyword_view_n'>예상노출횟수</th>
+                                        <th class='keyword_click_n'>예상클릭횟수</th>
+                                        <th class='keyword_price_n'>예상가격</th>
+                                        <th class='keyword_apply'>광고신청</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class='keyword_item'>
+                                        <td class='keyword_rank_n'>30</td>
+                                        <td class='keyword_word_n'>노트북렌탈</td>
+                                        <td class='keyword_product_n'>삼성노트북펜s</td>
+                                        <td class='keyword_view_n'>1,100</td>
+                                        <td class='keyword_click_n'>500</td>
+                                        <td class='keyword_price_n'>36,000</td>
+                                        <td class='keyword_apply'>
+                                            <a href=''>GO</a>
+                                        </td>
+                                    </tr>
+                                    <tr class='keyword_item'>
+                                        <td class='keyword_rank_n'>20</td>
+                                        <td class='keyword_word_n'>전자레인지</td>
+                                        <td class='keyword_product_n'>LG전자레인지</td>
+                                        <td class='keyword_view_n'>1,100</td>
+                                        <td class='keyword_click_n'>500</td>
+                                        <td class='keyword_price_n'>36,000</td>
+                                        <td class='keyword_apply'>
+                                            <a href=''>GO</a>
+                                        </td>
+                                    </tr>
+                                    <tr class='keyword_item'>
+                                        <td class='keyword_rank_n'>1</td>
+                                        <td class='keyword_word_n'>애플</td>
+                                        <td class='keyword_product_n'>아이폰X</td>
+                                        <td class='keyword_view_n'>1,100</td>
+                                        <td class='keyword_click_n'>500</td>
+                                        <td class='keyword_price_n'>36,000</td>
+                                        <td class='keyword_apply'>
+                                            <a href=''>GO</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class='points_popup ad_cancel'>
+                            <div class='popup_content'>
+                                <p>
+                                    <span>삼성노트북펜s</span>
+                                    광고중지를 하시겠습니까?
+                                </p>
+                            </div>
+                            <button onclick='popup_close(this)'>예</button>
+                            <button onclick='popup_close(this)'>아니요</button>
+                        </div>
+                        <div class='black'></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='footer'>
+                <div>
+                    <a href='./info_usage.html'>이용약관</a>
+                    <a href='./info_privacy.html'>개인정보처리방침</a>
+                    <a href='./info_location.html'>위치기반서비스 이용약관</a>
+                    <a href='#'>주식회사 쇼핑몰</a>
+                </div>
+                <div>
+                    <p class='address'>주소 : 서울특별시 주소 (여의도동, 한강시민공원)</p>
+                    <p>이메일 : 쇼핑몰@naver.com</p>
+                </div>
+                <div>
+                    <p>(c) 쇼핑몰, All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CONTENTS END -->
+
+    <script type='text/javascript' src='../js/sub.js'></script>
+    <script type='text/javascript'>mypage_init(false);</script>
+</body>
+
+</html>
